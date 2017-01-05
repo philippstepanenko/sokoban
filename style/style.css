@@ -1,0 +1,100 @@
+.cent{
+	text-align: center;
+}
+.level-name{
+  font-family: "Bookman Old Style",monospace;
+  font-size: 15px;
+  text-align: center;
+}
+.in-text{
+  font-family: "Bookman Old Style", bold, monospace;
+  font-size: 15px;
+  background-color: #dddddd; /* #1b1e23 #33ADFF; */
+}
+.stp{
+  font-family: "Bookman Old Style", bold, monospace;
+  font-size: 15px;
+  text-align: center;
+}
+.code{
+  font-family: "Bookman Old Style",monospace;
+  font-size: 12px;
+  text-align: center;
+}
+.foot{
+  font-size: 15px;
+  text-align: center;
+  font-family: "Bookman Old Style",monospace;
+  position: fixed; /* Фиксированное положение */
+  left: 34%; /* Расстояние от правого края окна браузера */
+  top: 95%; /* Расстояние сверху */
+  width: 30%;
+  height: 100%;
+  padding: 10px; /* Поля вокруг текста */ 
+  background: #ffffff; /* Цвет фона */ 
+  border: 1px solid #9b9ea3; /* Параметры рамки */   
+}
+canvas{
+  border: 10px solid #dddddd;
+  border-radius: 10px; /* Радиус скругления */
+  /*outline: 2px solid #9b9ea3;*/
+}
+#navbar { 
+font-family: "Bookman Old Style",monospace;
+font-size: 15px;
+margin: 0 auto; /* центрирование обертки! меню */
+padding: 0; 
+list-style-type: none; 
+border: 2px solid #9b9ea3;/* #0066FF; */
+/*border-radius: 20px 5px; */
+/*width: 368px;*/
+width: 370px;
+/*text-align: center; */
+background-color: #dddddd; /* #1b1e23 #33ADFF; */
+} 
+#navbar li {
+ text-align: center;
+ display: inline;
+} 
+#navbar a { 
+color: #555555; 
+padding: 5px 10px; 
+text-decoration: none; 
+font-weight: bold; 
+display: inline-block; 
+width: 100px; 
+} 
+#navbar a:hover { 
+/*border-radius: 20px 5px; */
+background-color: #ffffff;/*#0066FF; */
+color: #000000;
+}
+table{
+ width: 550px;
+ border: 1px solid #dddddd; 
+ margin: auto;
+}
+td{
+  background-color: #cccccc;
+  text-align: center;
+  font-family: "Bookman Old Style",monospace;
+  font-size: 15px;
+  font-weight: bold;
+  color: #555555;
+}
+.headtable{
+  background-color: #444444;
+  color: #ffffff;
+}
+.enter1{
+  font-family: "Bookman Old Style", bold, monospace;
+  background-color: #cccccc;
+  color: #555555;
+  font-size: 15px;
+}
+.enter2{
+  background-color: #444444;
+  color: #ffffff;
+  font-family: "Bookman Old Style", bold, monospace;
+  font-size: 15px;
+}
