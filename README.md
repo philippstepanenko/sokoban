@@ -7,3 +7,4 @@ Sokoban (Soko-Ban, яп. 倉庫番 сокобан — «кладовщик») �
 Необходима поддержка MySQL и PHP.
 # Коммиты
 1 commit - "base"
+2 commit - "new header"

@@ -1,6 +1,11 @@
 .cent{
 	text-align: center;
 }
+.head{
+  font-family: "Bookman Old Style",monospace;
+  font-size: 15px;
+  text-align: center;
+}
 .level-name{
   font-family: "Bookman Old Style",monospace;
   font-size: 15px;

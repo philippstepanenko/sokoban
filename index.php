@@ -6,7 +6,10 @@
 <meta charset="utf-8">
 </head>
 <body>
-<div class="cent"><img width="5%" heigth="5%" src="pic/sokoban.png"></div>
+<div class="level-name">
+<a>倉庫番</a><br>
+<img src="pic/head.png"><br>
+<a>Sokoban</a></div>
 <hr>
 <ul id="navbar">
   <li><a href="#">Уровни</a></li>
