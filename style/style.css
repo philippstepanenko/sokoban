@@ -75,17 +75,24 @@ background-color: #ffffff;/*#0066FF; */
 color: #000000;
 }
 table{
- width: 550px;
+ width: 330px;
  border: 1px solid #dddddd; 
  margin: auto;
 }
 td{
+  width: 50px;
   background-color: #cccccc;
   text-align: center;
   font-family: "Bookman Old Style",monospace;
   font-size: 15px;
   font-weight: bold;
   color: #555555;
+}
+.in-numb{
+  font-family: "Bookman Old Style", bold, monospace;
+  font-size: 15px;
+  background-color: #dddddd; /* #1b1e23 #33ADFF; */
+  width:100%;
 }
 .headtable{
   background-color: #444444;

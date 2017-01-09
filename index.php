@@ -9,18 +9,26 @@
 <div class="level-name">
 <a>倉庫番</a><br>
 <img src="pic/head.png"><br>
-<a>Sokoban</a></div>
+<a>SOKOBAN</a></div>
 <hr>
 <ul id="navbar">
-  <li><a href="#">Уровни</a></li>
-  <li><a href="#">Редактор</a></li>
-  <li><a href="#">Выйти</a></li>
+  <li><a href="index.php">Уровень</a></li>
+  <li><a href="setting.php">Редактор</a></li>
+  <li><a href="#">Справка</a></li>
 </ul>
 <br>
-<div class="level-name" id="name">Level 1</div>
+<div class="level-name" id="name">Level</div>
 <div class="cent"><canvas id="graphic" width="380" height="220"></canvas></div>
 <br><div class="stp" id="out">Steps: 0</div>
 <br><div class="foot">2016, Philipp Stepanenko</div>
+<?php // проверка GET
+if (!(isset($_GET['l']))){
+    $w=19; $h=11; $l="00001111100000000000000100010000000000000012001000000000000111002110000000000010020201000000000111010110100011111110001011011111003311020020000000000331111110111014110033100001000001111111110000111111100000000";
+}
+else{
+  $w=$_GET['w']; $h=$_GET['h']; $l=$_GET['l'];
+}
+?>
 <script>
 var x,y; // координаты персонажа
 var m=[];
@@ -28,12 +36,8 @@ var stp=0;
 var color=["#ffffff","#000000","#ffA500","#0000ff", "#ff0000","#00ee00"];
 var elem = document.getElementById('out');
 var key = { // клавиши управления
-  "left": 37
- ,"up": 38
- ,"right": 39
- ,"down": 40
- };
-var level='{"w":19, "h":11, "l":"00001111100000000000000100010000000000000012001000000000000111002110000000000010020201000000000111010110100011111110001011011111003311020020000000000331111110111014110033100001000001111111110000111111100000000"}';
+  "left": 37, "up": 38, "right": 39, "down": 40};
+var level='{"w":<?php echo $w;?>, "h":<?php echo $h;?>, "l":"<?php echo $l;?>"}';
 init_level();
 addEventListener("keydown", function(event) { // слушатель события
     if (event.keyCode == key["left"]) left();
@@ -46,6 +50,8 @@ addEventListener("keydown", function(event) { // слушатель событи
 var k=20;
 var canvas=document.querySelector('#graphic');
 var ctx=canvas.getContext('2d');
+canvas.width=level.w*k;
+canvas.height=level.h*k;
 var px=canvas.offsetLeft; var py=canvas.offsetTop;
 var w=level.w*k; // ширина поля
 var h=level.h*k; // высота поля
@@ -171,7 +177,9 @@ for(var i=0; i<level.h;i++){
 }
 if(sum==0) {
 	draw();
-	alert("win");
+  alert("win");
+  sql="INSERT INTO `levels` (`id`, `name`, `w`, `h`, `level_code`, `autor`) VALUES (NULL, 'Classic 1', '"+level.w+"', '"+level.h+"', '"+level.l+"', NULL);";
+  alert(sql);
 	}
 }
 </script>
