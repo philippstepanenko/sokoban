@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
 <head>
-<title>Editor. Setting</title>
+<title>Editor.</title>
 <link rel="stylesheet" type="text/css" href="style/style.css">
 <meta charset="utf-8">
 </head>
@@ -14,7 +14,7 @@
 <ul id="navbar">
   <li><a href="index.php">Уровень</a></li>
   <li><a href="setting.php">Редактор</a></li>
-  <li><a href="#">Справка</a></li>
+  <li><a href="ref.php">Справка</a></li>
 </ul>
 <br>
 <div class="level-name" id="name">Шаблон</div>

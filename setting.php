@@ -21,8 +21,8 @@
 <div class="level-name" id="name">Размеры уровня</div>
 
 <table>
-<tr><td class='headtable'>Высота</td><td><input id='w' class="in-numb" type='text' value=''></td></tr>
-<tr><td class='headtable'>Ширина</td><td><input id='h' class="in-numb" type='text' value=''></td></tr>
+<tr><td class='headtable'>Ширина</td><td><input id='w' class="in-numb" type='text' value='10'></td></tr>
+<tr><td class='headtable'>Высота</td><td><input id='h' class="in-numb" type='text' value='10'></td></tr>
 </table>
 <div class="cent"><input class="enter2" type="button" id="bt" onclick="go()" value="Применить"></div>
 

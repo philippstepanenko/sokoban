@@ -8,7 +8,7 @@
 <body>
 <div class="level-name">
 <a>倉庫番</a><br>
-<img src="pic/head.png"><br>
+<img src="pic/head2.png"><br>
 <a>SOKOBAN</a></div>
 <hr>
 <ul id="navbar">
@@ -178,10 +178,9 @@ for(var i=0; i<level.h;i++){
 if(sum==0) {
 	draw();
   alert("win");
-  sql="INSERT INTO `levels` (`id`, `name`, `w`, `h`, `level_code`, `autor`) VALUES (NULL, 'Classic 1', '"+level.w+"', '"+level.h+"', '"+level.l+"', NULL);";
-  alert(sql);
 	}
 }
+
 </script>
 </body>
 </html>
