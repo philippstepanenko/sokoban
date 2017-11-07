@@ -50,6 +50,26 @@ addEventListener("keydown", function(event) { // слушатель событи
     elem.innerHTML="Steps: "+ stp;
 });
 
+// управление мышкой
+var xt=0;
+var yt=0;
+
+addEventListener("mousedown", function(event) { // 
+xt=event.x; yt=event.y;
+});
+
+addEventListener("mouseup", function(event) { // 
+xt-=event.x; yt-=event.y;
+if ((xt!=0) || (yt!=0)) dir();
+});
+
+function dir(){ // выбор направления движения
+  Math.abs(xt)>Math.abs(yt) ? (xt>0) ? left() :right(): (yt>0) ? up(): down();
+  draw2();
+  elem.innerHTML="Steps: "+ stp;
+}
+
+
 var k=20;
 var canvas=document.querySelector('#graphic');
 var ctx=canvas.getContext('2d');
