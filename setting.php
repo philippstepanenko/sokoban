@@ -15,10 +15,10 @@
 <ul id="navbar">
   <li><a href="index.php">Уровень</a></li>
   <li><a href="setting.php">Редактор</a></li>
-  <li><a href="#">Справка</a></li>
+  <li><a href="ref.php">Справка</a></li>
 </ul>
 <br>
-<div class="level-name" id="name">Размеры уровня</div>
+<div class="level-name">Размеры уровня</div>
 
 <table>
 <tr><td class='headtable'>Ширина</td><td><input id='w' class="in-numb" type='text' value='10'></td></tr>
