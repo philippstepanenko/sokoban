@@ -110,3 +110,27 @@ td{
   font-family: "Bookman Old Style", bold, monospace;
   font-size: 15px;
 }
+.code0{
+  background-color: #ffffff;
+  color: black;
+}
+.code1{
+  background-color: #000000;
+  color: white;
+}
+.code2{
+  background-color: #ffb500;
+  color: white;
+}
+.code3{
+  background-color: #0000ff;
+  color: white;
+}
+.code4{
+  background-color: #ff0000;
+  color: white;
+}
+.code5{
+  background-color: #00ee00;
+  color: white;
+}

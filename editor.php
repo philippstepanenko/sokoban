@@ -17,8 +17,17 @@
   <li><a href="ref.php">Справка</a></li>
 </ul>
 <br>
-<div class="level-name" id="name">Шаблон</div>
-<div class="cent"><canvas id="drawingCanvas" width="10" height="10"></canvas></div><br>
+<div class="level-name" id="name">Редактирование уровня</div>
+<div class="cent"><canvas id="drawingCanvas" width="10" height="10"></canvas></div>
+<div class="cent">
+<input class="code0" type="button" onclick="select_code(this.value)" value="0">
+<input class="code1" type="button" onclick="select_code(this.value)" value="1">
+<input class="code2" type="button" onclick="select_code(this.value)" value="2">
+<input class="code3" type="button" onclick="select_code(this.value)" value="3">
+<input class="code4" type="button" onclick="select_code(this.value)" value="4">
+<input class="code5" type="button" onclick="select_code(this.value)" value="5">
+</div>
+<br>
 <div class="cent"><input class="enter2" type="button" id="bt" onclick="go()" value="Пройти уровень"></div>
 <br><div class="code" id="out"></div>
 <br><div class="foot">2016, Philipp Stepanenko</div>
@@ -50,6 +59,7 @@ var m=[];
 //var color=["#ffffff","#000000","#ffA500","#0000ff", "#ff0000","#00ee00"];
 var color=["#ffffff","#000000","#ffb500","#0000ff", "#ff0000","#00ee00"];
 var k=20;
+var isDrawing;
 canvas = document.getElementById("drawingCanvas");
 ctx = canvas.getContext("2d");
 canvas.onmousedown = startDrawing;
@@ -119,8 +129,8 @@ function draw_level(){ //вывод уровня на экран
       ctx.fill();
       }
   }
-  ctx.fillStyle="#ff0000";
-  ctx.fillRect(x*k+1,y*k+1,k-2,k-2);
+  //ctx.fillStyle="#ff0000";
+  //ctx.fillRect(x*k+1,y*k+1,k-2,k-2);
 }
 
 function al_mas(){
@@ -143,6 +153,10 @@ for(var i=0; i<level.h;i++){
     }
   }
 window.location="index.php?w="+level.w+"&h="+level.h+"&l="+l;
+}
+
+function select_code(cd){
+  code=cd;
 }
 </script>
 </body>
