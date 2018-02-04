@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Editor.</title>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+<meta charset="utf-8">
+</head>
+<body>
+<div class="level-name">
+<a>倉庫番</a><br>
+<img src="pic/head.png"><br>
+<a>SOKOBAN</a></div>
+<hr>
+<ul id="navbar">
+  <li><a href="index.html">Уровень</a></li>
+  <li><a href="setting.html">Редактор</a></li>
+  <li><a href="ref.html">Справка</a></li>
+</ul>
+<br>
+<div class="level-name" id="name">Редактирование уровня</div>
+<div class="cent"><canvas id="drawingCanvas" width="10" height="10"></canvas></div>
+<div class="cent">
+<input class="code0" type="button" onclick="select_code(this.value)" value="0">
+<input class="code1" type="button" onclick="select_code(this.value)" value="1">
+<input class="code2" type="button" onclick="select_code(this.value)" value="2">
+<input class="code3" type="button" onclick="select_code(this.value)" value="3">
+<input class="code4" type="button" onclick="select_code(this.value)" value="4">
+<input class="code5" type="button" onclick="select_code(this.value)" value="5">
+</div>
+<br>
+<div class="cent"><input class="enter2" type="button" id="bt" onclick="go()" value="Пройти уровень"></div>
+<br><div class="code" id="out"></div>
+<br><div class="foot">2016, Philipp Stepanenko</div>
+<script src="scripts/editor.js"></script>
+</body>
+</html>
