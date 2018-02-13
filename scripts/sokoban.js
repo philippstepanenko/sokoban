@@ -23,6 +23,9 @@ init_level();
 var lname = document.getElementById('lname');
 lname.innerHTML+="<a href='editor.html?w="+level.w+"&h="+level.h+"&l="+level.l+"'> (редактировать)</a>";
 addEventListener("keydown", function(event) { // слушатель события
+    if(p.hidden == false){
+      p.hidden = true;
+    }
     if (event.keyCode == key["left"]) left();
     else if(event.keyCode == key["up"]) up();
     else if(event.keyCode == key["right"]) right();
@@ -30,26 +33,6 @@ addEventListener("keydown", function(event) { // слушатель событи
     draw2();
     elem.innerHTML="Steps: "+ stp;
 });
-
-// управление мышкой
-var xt=0;
-var yt=0;
-
-addEventListener("mousedown", function(event) { // 
-xt=event.x; yt=event.y;
-});
-
-addEventListener("mouseup", function(event) { // 
-xt-=event.x; yt-=event.y;
-if ((xt!=0) || (yt!=0)) dir();
-});
-
-function dir(){ // выбор направления движения
-  Math.abs(xt)>Math.abs(yt) ? (xt>0) ? left() :right(): (yt>0) ? up(): down();
-  draw2();
-  elem.innerHTML="Steps: "+ stp;
-}
-
 
 var k=20;
 var canvas=document.querySelector('#graphic');
@@ -59,6 +42,33 @@ canvas.height=level.h*k;
 var px=canvas.offsetLeft; var py=canvas.offsetTop;
 var w=level.w*k; // ширина поля
 var h=level.h*k; // высота поля
+
+// управление мышкой
+var xt=0;
+var yt=0;
+
+addEventListener("mousedown", function(event) {
+  if (px<event.x && py<event.y && px+w>event.x && py+h>event.y) {
+    xt=event.x; yt=event.y;
+  }
+});
+
+addEventListener("mouseup", function(event) { 
+  if (px<event.x && py<event.y && px+w>event.x && py+h>event.y) {
+    xt-=event.x; yt-=event.y;
+    if ((xt!=0) || (yt!=0)) dir();
+  }
+});
+
+function dir(){ // выбор направления движения
+  Math.abs(xt)>Math.abs(yt) ? (xt>0) ? left() :right(): (yt>0) ? up(): down();
+  draw2();
+  elem.innerHTML="Steps: "+ stp;
+}
+
+
+var p = document.getElementById("p");
+
 draw();
 
 function draw(){
@@ -195,6 +205,17 @@ for(var i=0; i<level.h;i++){
 }
 if(sum==0) {
   draw2();
-  alert("win");
+  //alert("win");
+  popup();
+  }
+}
+
+function popup(){
+  if(p.hidden == true){
+    p.hidden = false;
+    p.innerHTML="<div class='popup-content'><strong>Уровень пройден! Результат: "+stp+"</strong><br>Нажмите любую клавишу...</div>";
+  }
+  else{
+    p.hidden = true;
   }
 }
