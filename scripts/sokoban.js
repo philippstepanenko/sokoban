@@ -1,7 +1,7 @@
 var x,y; // координаты персонажа
 var m=[];
 var stp=0;
-var color=["#ffffff","#000000","#ffa500","#0000ff", "#ff0000","#00ee00"];
+var color=["#ffffff","#000000","#ffa500","#0000ff","#ff0000","#00cb00"];
 var elem = document.getElementById('out');
 var key = { // клавиши управления
   "left": 37, "up": 38, "right": 39, "down": 40};
@@ -72,7 +72,7 @@ var p = document.getElementById("p");
 draw();
 
 function draw(){
-  ctx.fillStyle="#000000";
+  ctx.fillStyle=color[1];
   ctx.fillRect(0,0,w,h);
   for(var i=0; i<div(h,k);i++){
     for(var j=0; j<div(w,k);j++){
@@ -82,7 +82,7 @@ function draw(){
       }
       //elem.innerHTML+="<br>";
   }
-  ctx.fillStyle="#ff0000";
+  ctx.fillStyle=color[4];
   ctx.fillRect(x*k+1,y*k+1,k-2,k-2);
 }
 
@@ -99,7 +99,7 @@ for(var i=x-2;i<x+2;i++){
     ctx.fillRect(i*k+1,y*k+1,k-2,k-2);
   }
 }
-ctx.fillStyle="#ff0000"; // color[4]
+ctx.fillStyle=color[4];
 ctx.fillRect(x*k+1,y*k+1,k-2,k-2);
 }
 

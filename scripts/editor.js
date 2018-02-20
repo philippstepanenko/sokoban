@@ -20,7 +20,8 @@ else{
 }
 
 var m=[];
-var color=["#ffffff","#000000","#ffa500","#0000ff", "#ff0000","#00ee00"];
+var color=["#ffffff","#000000","#ffa500","#0000ff", "#ff0000","#00dd00"];
+
 var k=20;
 var isDrawing;
 canvas = document.getElementById("drawingCanvas");
@@ -79,9 +80,9 @@ function div(x, y){ // целочисленное деление
     return (x-x%y)/y;
 }
 function draw_level(){ //вывод уровня на экран
-  ctx.fillStyle="#000000";
+  ctx.fillStyle=color[1];
   ctx.fillRect(0,0,w,h);
-  ctx.fillStyle="#ffffff";
+  ctx.fillStyle=color[0];
   for(var i=0; i<div(h,k);i++){
     for(var j=0; j<div(w,k);j++){
       ctx.fillStyle=color[m[i][j]];
